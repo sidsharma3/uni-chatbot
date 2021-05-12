@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}">
+    </head>
+    <body>
+        <center>
+            <div>
+                <h1> UNIVERSITY CHATBOT</h1>
+                <form method="POST", action="{{url_for('home')}}">
+                    <h3>Type your question here:</h3>  
+                    <input type="text", name='question', placeholder="Type your question here"> 
+                    <br><br>
+                    <input type="submit" , value='Get Your Answer' >
+                </form> 
+            </div>
+        </center>
+    </body>
+</html>
