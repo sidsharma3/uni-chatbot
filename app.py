@@ -1,12 +1,12 @@
 from flask import Flask, render_template, request, jsonify
-import tensorflow
-from tensorflow import keras
+import tensorflow as tf
+#from tensorflow import keras
 import numpy as np
 import pickle
-from keras.preprocessing.sequence import pad_sequences
+from tensorflow.keras.preprocessing.sequence import pad_sequences
 
-encoder_model = keras.models.load_model('./encoderModel')
-decoder_model = keras.models.load_model('./decoderModel')
+encoder_model = tf.keras.models.load_model('./encoderModel')
+decoder_model = tf.keras.models.load_model('./decoderModel')
 with open('tokenizer_inputs.pickle', 'rb') as handle:
         tokenizer_inputs = pickle.load(handle)
 
